@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us"
+  },
+  "hero": {
+    "description": "Your trusted partner for consulting, finance and technology. We support you at every stage of your growth.",
+    "cta": "About Us"
+  },
+  "services": {
+    "conseil": {
+      "name": "COUMBASSA & SANDEN CONSEIL",
+      "description": "Legal and tax solutions for your business"
+    },
+    "finance": {
+      "name": "COUMBASSA & SANDEN FINANCE",
+      "description": "Optimize your investments and growth"
+    },
+    "tech": {
+      "name": "COUMBASSA & SANDEN TECH",
+      "description": "Digital solutions for your technological and digital transformations"
+    }
+  },
+  "digitalServices": {
+    "title": "Our Digital Services",
+    "connect": {
+      "description": "Platform connecting legal professionals in Africa, facilitating collaboration and access to skills"
+    },
+    "digit": {
+      "description": "Platform for intelligent and automated contract management (under development)"
+    },
+    "news": {
+      "description": "Legal and tax news and information service in Africa"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Coumbassa & Sanden Group is a multidisciplinary group bringing together expertise in legal, tax, accounting, finance, tech and digital consulting.",
+    "belief": "We believe that expertise, listening and innovation are the keys to sustainable performance.",
+    "video": {
+      "title": "Discover us in video"
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "projects": "Files, works and projects",
+      "team": "Collaborators, consultants and partners"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Stay informed of our news",
+      "description": "Receive our latest news and advice directly in your mailbox",
+      "placeholder": "Your email address"
+    },
+    "contact": {
+      "title": "Our contacts"
+    },
+    "social": {
+      "title": "Our social networks"
+    },
+    "seeAlso": "See also",
+    "companies": {
+      "conseil": "Legal and tax consulting",
+      "finance": "Finance and accounting",
+      "tech": "Tech and Digital"
+    },
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "discover": "Discover",
+    "learnMore": "Learn more"
+  }
+}

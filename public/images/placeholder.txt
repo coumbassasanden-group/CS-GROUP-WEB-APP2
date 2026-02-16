@@ -1,0 +1,15 @@
+Images requises:
+- logo-default.png
+- ds-nimba.png
+- conseil-1000X600.png
+- finance-1000X600.png
+- tech-1000X600.png
+- connect.png
+- alt-digit.png
+- alt-news.png
+- group.jpg
+- logo-cs-conseil.png
+- logo-cs-finance.png
+- logo-cs-tech.png
+
+Vous pouvez les copier depuis le site existant ou créer de nouvelles images.
