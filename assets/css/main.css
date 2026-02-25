@@ -344,10 +344,33 @@ body {
   display: none;
   color: #3d2817;
   transition: color 0.3s ease;
+  z-index: 1001;
 }
 
 .mobile-nav-toggle:hover {
   color: var(--primary-gold);
+}
+
+.mobile-nav-hide {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: #3d2817;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.mobile-nav-hide:hover {
+  background: var(--primary-gold);
+  color: white;
 }
 
 @media (max-width: 991px) {
@@ -2042,10 +2065,14 @@ body {
   max-width: 1400px;
 }
 
-.services-showcase .row {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+/* Showcase Grid - CSS Grid Layout */
+.showcase-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 30px !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 15px !important;
 }
 
 .showcase-card {
@@ -2131,17 +2158,22 @@ body {
   flex-grow: 1;
 }
 
+/* Desktop - 3 colonnes */
 @media (min-width: 992px) {
-  .services-showcase .col-lg-4 {
-    flex: 0 0 auto;
-    width: 32%;
-    max-width: 380px;
+  .showcase-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
-@media (max-width: 991px) {
+/* Tablette - 2 colonnes */
+@media (min-width: 768px) and (max-width: 991px) {
   .services-showcase {
     padding: 60px 0;
+  }
+  
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 25px !important;
   }
   
   .showcase-logo-container {
@@ -2154,7 +2186,28 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile - 1 colonne */
+@media (max-width: 767px) {
+  .services-showcase {
+    padding: 40px 0;
+  }
+  
+  .services-showcase .container {
+    padding: 0 15px;
+  }
+  
+  .showcase-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 !important;
+  }
+  
+  .showcase-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
   .showcase-title {
     font-size: 1.2rem;
     margin: 25px 20px 12px;
@@ -2163,9 +2216,41 @@ body {
   .showcase-description {
     font-size: 14px;
     margin: 0 20px 25px;
+    line-height: 1.6;
   }
   
-  .services-showcase .row {
-    flex-direction: column;
+  .showcase-logo-container {
+    padding: 30px 20px;
+    min-height: 180px;
+  }
+  
+  .showcase-logo {
+    max-height: 100px;
+  }
+}
+
+/* Très petits mobiles */
+@media (max-width: 480px) {
+  .services-showcase {
+    padding: 30px 0;
+  }
+  
+  .showcase-title {
+    font-size: 1.1rem;
+    margin: 20px 15px 10px;
+  }
+  
+  .showcase-description {
+    font-size: 13px;
+    margin: 0 15px 20px;
+  }
+  
+  .showcase-logo-container {
+    padding: 25px 15px;
+    min-height: 150px;
+  }
+  
+  .showcase-logo {
+    max-height: 80px;
   }
 }
