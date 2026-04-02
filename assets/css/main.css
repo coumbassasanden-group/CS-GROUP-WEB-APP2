@@ -931,11 +931,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .connect-btn {
-  background: #ff8c42;
+  background: #ce703f;
 }
 
 .connect-btn:hover {
-  background: #ff7028;
+  background: #b5602f;
 }
 
 .digit-btn {
@@ -964,7 +964,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .connect-accent {
-  background: #ff8c42;
+  background: #ce703f;
 }
 
 .digit-accent {
