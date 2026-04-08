@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 /* CSS Variables */
 :root {
@@ -21,9 +21,9 @@
   --gray-900: #111827;
   
   /* Font families - CS-CONSEIL style */
-  --default-font: 'DM Sans', sans-serif;
-  --heading-font: 'DM Serif Display', serif;
-  --nav-font: 'DM Sans', sans-serif;
+  --default-font: 'Poppins', sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
+  --nav-font: 'Poppins', sans-serif;
 }
 
 /* Global Reset & Base Styles */
@@ -931,11 +931,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .connect-btn {
-  background: #ff8c42;
+  background: #ce703f;
 }
 
 .connect-btn:hover {
-  background: #ff7028;
+  background: #b5602f;
 }
 
 .digit-btn {
@@ -964,7 +964,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .connect-accent {
-  background: #ff8c42;
+  background: #ce703f;
 }
 
 .digit-accent {
@@ -1207,7 +1207,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about .section-title {
-  padding-top: 10px;
+  padding-top: 40px;
+  margin-bottom: 25px;
 }
 
 .about-grid {
@@ -1292,7 +1293,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.15rem;
   color: var(--gray-600);
   max-width: 900px;
-  margin: 5px auto;
+  margin: 5px auto 30px;
   line-height: 1.8;
 }
 
@@ -1303,7 +1304,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.6;
   max-width: 900px;
-  margin: 0 auto 15px;
+  margin: 20px auto 50px;
 }
 
 .main-image-wrapper {
@@ -2194,6 +2195,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 30px 25px 15px;
   font-family: var(--heading-font);
   line-height: 1.3;
+  text-decoration: none;
 }
 
 .showcase-title.conseil-title {

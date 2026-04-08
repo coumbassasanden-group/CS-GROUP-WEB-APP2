@@ -282,6 +282,7 @@
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .cs-footer-contact a:hover {
@@ -304,6 +305,7 @@
     padding: 10px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
 }
 
 .cs-social-link:hover {
@@ -340,6 +342,10 @@
     gap: 30px;
     max-width: 900px;
     margin: 0 auto;
+}
+
+.cs-companies-grid a {
+    text-decoration: none;
 }
 
 .cs-company-card {
