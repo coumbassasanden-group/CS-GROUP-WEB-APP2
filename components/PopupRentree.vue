@@ -27,40 +27,29 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const formUrl = 'https://forms.gle/aD5qSBoM8ruLTA5n7'
-const storageKey = 'cs-popup-rentree-seen'
 const visible = ref(false)
-const route = useRoute()
 
 const close = () => {
   visible.value = false
 }
 
-const isHome = () => /^\/(fr|en)?\/?$/.test(route.path)
-
-watch(
-  () => route.path,
-  () => {
-    if (isHome()) {
-      visible.value = true
-      return
-    }
-    // `localStorage` n'existe pas pendant le rendu serveur : ce site est
-    // rendu côté serveur, contrairement à tech.coumbassa-sanden.com qui est
-    // statique. Le pop-up s'affiche de toute façon après hydratation.
-    if (!import.meta.client) return
-
-    const today = new Date().toISOString().slice(0, 10)
-    const lastSeen = localStorage.getItem(storageKey)
-    if (lastSeen !== today) {
-      visible.value = true
-      localStorage.setItem(storageKey, today)
-    }
-  },
-  { immediate: true }
-)
+/**
+ * Affiché a chaque visite, sur toutes les pages.
+ *
+ * Plus de garde « une fois par jour » : le pop-up reparait a chaque arrivee
+ * sur le site. Le declenchement se fait au montage et non sur le changement
+ * de route, pour qu'une navigation interne — accueil, services, retour a
+ * l'accueil — ne le rejoue pas trois fois dans la meme visite.
+ *
+ * onMounted ne s'execute que dans le navigateur : aucun acces a localStorage
+ * ni au rendu serveur a proteger.
+ */
+onMounted(() => {
+  visible.value = true
+})
 </script>
 
 <style scoped>
