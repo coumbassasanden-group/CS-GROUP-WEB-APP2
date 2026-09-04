@@ -37,15 +37,15 @@ const close = () => {
 }
 
 /**
- * Affiché a chaque visite, sur toutes les pages.
+ * Affiché à chaque visite, sur toutes les pages.
  *
- * Plus de garde « une fois par jour » : le pop-up reparait a chaque arrivee
- * sur le site. Le declenchement se fait au montage et non sur le changement
- * de route, pour qu'une navigation interne — accueil, services, retour a
- * l'accueil — ne le rejoue pas trois fois dans la meme visite.
+ * Plus de garde « une fois par jour » : le pop-up reparaît à chaque arrivée
+ * sur le site. Le déclenchement se fait au montage et non sur le changement
+ * de route, pour qu'une navigation interne — accueil, services, retour à
+ * l'accueil — ne le rejoue pas trois fois dans la même visite.
  *
- * onMounted ne s'execute que dans le navigateur : aucun acces a localStorage
- * ni au rendu serveur a proteger.
+ * onMounted ne s'exécute que dans le navigateur : il n'y a donc aucun accès
+ * à localStorage à protéger du rendu serveur.
  */
 onMounted(() => {
   visible.value = true
